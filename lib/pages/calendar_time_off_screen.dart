@@ -36,7 +36,7 @@ class _CalendarTimeOffScreenState extends State<CalendarTimeOffScreen> {
   }
 
   Future<void> fetchData() async {
-    final url = 'https://odoo-api-rust.vercel.app/hr-leave/by-employee';
+    final url = '{{host}}/hr-leave/by-employee';
 
     try {
       final response = await http.get(

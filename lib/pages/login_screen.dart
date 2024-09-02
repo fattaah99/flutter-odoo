@@ -31,7 +31,7 @@ class _SignInScreenState extends State<SignInScreen> {
 
     try {
       final response = await http.post(
-        Uri.parse('https://odoo-api-rust.vercel.app/auth/login'),
+        Uri.parse('{{host}}/auth/login'),
         headers: <String, String>{
           'Content-Type': 'application/json; charset=UTF-8',
           'x-api-key': 'odoo',

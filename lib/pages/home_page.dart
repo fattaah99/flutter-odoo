@@ -30,8 +30,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   Future<Employee> fetchEmployee() async {
-    final url =
-        'https://odoo-api-rust.vercel.app/employee/${widget.employeeId}';
+    final url = '{{host}}/employee/${widget.employeeId}';
     print('Fetching employee data from: $url'); // Debug log: URL
 
     try {
@@ -62,7 +61,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   Future<void> logout() async {
-    final url = 'https://odoo-api-rust.vercel.app/auth/logout';
+    final url = '{{host}}/auth/logout';
     print('Logging out from: $url'); // Debug log: URL
 
     try {

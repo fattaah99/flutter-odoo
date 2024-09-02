@@ -33,7 +33,7 @@ class _TimeOffScreenState extends State<TimeOffScreen> {
   Future<void> _fetchTimeOffTypes() async {
     try {
       final response = await http.get(
-        Uri.parse('https://odoo-api-rust.vercel.app/hr-leave-type'),
+        Uri.parse('{{host}}/hr-leave-type'),
         headers: {
           'Content-Type': 'application/json',
           'Authorization': 'Bearer ${widget.token}',
@@ -207,7 +207,7 @@ class _TimeOffScreenState extends State<TimeOffScreen> {
 
     try {
       final response = await http.post(
-        Uri.parse('https://odoo-api-rust.vercel.app/hr-leave'),
+        Uri.parse('{{host}}/hr-leave'),
         headers: {
           'Content-Type': 'application/json',
           'Authorization': 'Bearer ${widget.token}',

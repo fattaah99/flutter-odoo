@@ -31,7 +31,7 @@ class _AttendanceScreenState extends State<AttendanceScreen> {
 
   Future<void> fetchAttendanceData() async {
     final response = await http.get(
-      Uri.parse('https://odoo-api-rust.vercel.app/attendance/by-employee-date'),
+      Uri.parse('{{host}}/attendance/by-employee-date'),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
         'Authorization': 'Bearer ${widget.token}',
@@ -72,7 +72,7 @@ class _AttendanceScreenState extends State<AttendanceScreen> {
           DateFormat('yyyy-MM-dd HH:mm:ss').format(DateTime.now());
 
       final response = await http.post(
-        Uri.parse('https://odoo-api-rust.vercel.app/attendance/check-in'),
+        Uri.parse('{{host}}/attendance/check-in'),
         headers: <String, String>{
           'Content-Type': 'application/json; charset=UTF-8',
           'Authorization': 'Bearer ${widget.token}',
@@ -122,7 +122,7 @@ class _AttendanceScreenState extends State<AttendanceScreen> {
           DateFormat('yyyy-MM-dd HH:mm:ss').format(DateTime.now());
 
       final response = await http.post(
-        Uri.parse('https://odoo-api-rust.vercel.app/attendance/check-out'),
+        Uri.parse('{{host}}/attendance/check-out'),
         headers: <String, String>{
           'Content-Type': 'application/json; charset=UTF-8',
           'Authorization': 'Bearer ${widget.token}',
