@@ -1,4 +1,4 @@
-# odoo_application_ui_test
+# odoo application
 
 A new Flutter project.
 
